@@ -8,6 +8,13 @@ type Books struct {
 	book_id int
 }
 
+type Student struct {
+	Id string
+	Name string
+	age int
+}
+
+
 
 //抽象工厂
 //add for test
