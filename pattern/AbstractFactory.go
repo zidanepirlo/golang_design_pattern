@@ -1,6 +1,7 @@
 package pattern
 
 //抽象工厂
+//add for test
 type AbstractFactory interface {
 	Produce() pen //生产笔
 }
