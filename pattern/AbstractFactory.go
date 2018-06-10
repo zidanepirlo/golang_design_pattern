@@ -1,5 +1,14 @@
 package pattern
 
+
+type Books struct {
+	title string
+	author string
+	subject string
+	book_id int
+}
+
+
 //抽象工厂
 //add for test
 type AbstractFactory interface {
