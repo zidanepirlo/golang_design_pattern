@@ -9,21 +9,19 @@ type ComputerAbsFactory interface {
 
 type Computer interface {
 	Configuration() string
+
 	SetCpu(string)
 	SetOs(string)
 	SetMemory(string)
 	SetHardDisk(string)
-}
 
-type GetProperty interface {
-	getCpu() string
-	getOs() string
-	getMemory() string
-	getHardDisk() string
+	GetCpu() string
+	GetOs() string
+	GetMemory() string
+	GetHardDisk() string
 }
 
 type Mac struct {
-
 	cpu string
 	os string
 	memory string
@@ -31,13 +29,14 @@ type Mac struct {
 }
 
 type ThinkPad struct {
-
 	cpu string
 	os string
 	memory string
 	hardDisk string
 }
 
+
+//set property
 func (thinkpad *ThinkPad) SetCpu(val string){
 	if thinkpad!=nil {
 		thinkpad.cpu = val
@@ -62,7 +61,6 @@ func (thinkpad *ThinkPad) SetHardDisk(val string){
 	}
 }
 
-
 func (mac *Mac) SetCpu(val string){
 	if mac!=nil {
 		mac.cpu = val
@@ -86,6 +84,69 @@ func (mac *Mac) SetHardDisk(val string){
 		mac.hardDisk = val
 	}
 }
+//end
+
+
+//get property
+func (thinkpad *ThinkPad) GetCpu() string{
+	if thinkpad!=nil {
+		return thinkpad.cpu
+	}
+	return ""
+}
+
+func (thinkpad *ThinkPad) GetOs() string{
+	if thinkpad!=nil {
+		return thinkpad.os
+	}
+	return ""
+}
+
+func (thinkpad *ThinkPad) GetMemory() string{
+	if thinkpad!=nil {
+		return thinkpad.memory
+	}
+	return ""
+}
+
+func (thinkpad *ThinkPad) GetHardDisk() string {
+	if thinkpad!=nil {
+		return thinkpad.hardDisk
+	}
+	return ""
+}
+
+func (mac *Mac) GetCpu() string {
+	if mac!=nil {
+		return mac.cpu
+	}
+	return ""
+}
+
+func (mac *Mac) GetOs() string{
+	if mac!=nil {
+		return mac.os
+	}
+	return ""
+}
+
+func (mac *Mac) GetMemory() string {
+	if mac!=nil {
+		return mac.memory
+	}
+	return ""
+}
+
+func (mac *Mac) GetHardDisk() string {
+	if mac!=nil {
+		return mac.hardDisk
+	}
+	return ""
+}
+
+//end
+
+
 
 func (mac Mac) Configuration() string {
 
@@ -99,7 +160,7 @@ func (thinkpad ThinkPad) Configuration() string {
 
 func Produce(val interface{}) Computer {
 
-	switch val.(type) { //多选语句switch
+	switch val.(type) {
 	case Mac:
 		mac := new(Mac)
 		mac.cpu = "Intel Core i7"
