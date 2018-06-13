@@ -5,7 +5,7 @@
 //  * 结构型 J
 //  * 行为型 X
 //
-//   -AbstractFactory.go : 抽象工厂模式(C)
+//   -Factory.go : 工厂模式(C)
 //   -Adapter.go : 适配器模式(J)
 //   -Bridge.go : 桥接模式(J)
 //   -Builder.go : 建造者模式(C)
@@ -14,7 +14,6 @@
 //   -Composite.go : 组合模式(J)
 //   -Decorator.go : 装饰器模式(J)
 //   -Facade.go : 外观模式(J)
-//   -Factory.go : 工厂模式(C)
 //   -Flyweight.go : 享元模式(J)
 //   -Interpreter.go : 解释器模式(X)
 //   -Iterator.go : 迭代器模式(X)

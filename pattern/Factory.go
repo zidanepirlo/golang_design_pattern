@@ -1,8 +1,11 @@
 package pattern
 
-//工厂模式适合：凡是出现了大量的产品需要创建，
-//并且具有共同的接口时，可以通过工厂方法模式进行创建
 import "fmt"
+
+//抽象工厂
+type AbstractFactory interface {
+	Produce() pen //生产笔
+}
 
 //笔
 type pen interface {
@@ -10,22 +13,36 @@ type pen interface {
 	Write()
 }
 
+type PencilFactory struct {
+}
+
+type BrushPen struct {
+}
+//工厂
+type PenFactory struct {
+}
+
+
 type pencil struct {
+}
+
+type brushPen struct {
+}
+
+func (PencilFactory) Produce() pen {
+	return new(pencil)
+}
+
+func (BrushPen) Produce() pen {
+	return new(brushPen)
 }
 
 func (p *pencil) Write() {
 	fmt.Println("铅笔")
 }
 
-type brushPen struct {
-}
-
 func (p *brushPen) Write() {
 	fmt.Println("毛笔")
-}
-
-//工厂
-type PenFactory struct {
 }
 
 func (this PenFactory) Produce(typ string) pen {
