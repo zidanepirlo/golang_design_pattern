@@ -34,7 +34,7 @@ func (mac Mac) Configuration() string {
 
 func (thinkpad ThinkPad) Configuration() string {
 
-	return "Hi, I'm Mac"+split+thinkpad.cpu+split+thinkpad.os+split+thinkpad.memory+split+thinkpad.hardDisk;
+	return "Hi, I'm ThinkPad"+split+thinkpad.cpu+split+thinkpad.os+split+thinkpad.memory+split+thinkpad.hardDisk;
 }
 
 func Produce(val interface{}) Computer {
