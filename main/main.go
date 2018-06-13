@@ -3,6 +3,7 @@ package main
 import (
 	"golang_design_pattern/pattern"
 	"fmt"
+	"golang_design_pattern/mypattern"
 )
 
 func testFactory()  {
@@ -14,7 +15,7 @@ func testFactory()  {
 
 func testMyFactory()  {
 
-	var computer *pattern.Computer
+	var computer *mypattern.Computer
 
 
 
