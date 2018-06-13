@@ -1,4 +1,4 @@
-package pattern
+package mypattern
 
 const split  = "--"
 
