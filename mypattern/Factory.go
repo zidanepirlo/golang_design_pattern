@@ -143,7 +143,6 @@ func (mac *Mac) GetHardDisk() string {
 	}
 	return ""
 }
-
 //end
 
 
@@ -180,7 +179,6 @@ func Produce(val interface{}) Computer {
 	default:
 		return nil
 	}
-
 }
 
 
